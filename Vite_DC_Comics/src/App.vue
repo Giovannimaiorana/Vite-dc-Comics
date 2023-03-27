@@ -1,6 +1,16 @@
-<script setup>
+<script>
+import ThisHeader from './components/ThisHeader.vue'
+export default {
+  components: {
+    ThisHeader,
+  }
+}
 </script>
 
-<template></template>
+<template>
+  <ThisHeader />
+</template>
 
-<style ></style>
+<style lang="scss">
+@use "./styles/general.scss"
+</style>
