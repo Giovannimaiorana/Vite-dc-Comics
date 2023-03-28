@@ -1,8 +1,11 @@
 <script>
 import ThisFatherMain from './ThisFatherMain.vue';
+
+
 export default {
     components: {
         ThisFatherMain,
+
     },
 
     props: {
@@ -17,12 +20,13 @@ export default {
         <div class="jumboTron">
 
         </div>
+
         <div class="cardlist">
-            <div class="card">
-                <img :src="img">
-                <h2> {{ text }} </h2>
-            </div>
-            <button>LOAD MORE</button>
+
+            <ThisFatherMain />
+
+
+
         </div>
     </div>
 </template>
@@ -47,22 +51,6 @@ button {
 .cardlist {
     width: 100%;
     background-color: rgb(27, 27, 27);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
-.card {
-    width: calc(100% / 6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-
-h2 {
-    color: white;
-    font-size: 15px;
-}
-
-.cardlist img {}
 </style>

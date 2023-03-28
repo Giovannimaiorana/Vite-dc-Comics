@@ -5,7 +5,7 @@ export default {
     data() {
 
         return {
-            dates: [
+            slides: [
                 {
                     "thumb": "https://static.dc.com/2023-03/LEGIONOB_Cv1_00111_DIGITAL.jpg?w=640",
                     "price": "$19.99",
@@ -86,9 +86,44 @@ export default {
 
 <template>
     <div>
-        <date v-for="date in dates " :img="date.thumb" :text="date.series" />
+        <div>
+            <div class="container">
+                <div v-for="slide in slides" class="card">
+                    <img :src="slide.thumb">
+                    <h2> {{ slide.series }} </h2>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 </template>
 
-<style></style>
+<style scoped>
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1300px;
+    margin: auto;
+}
+
+.card {
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin-left: 20px;
+}
+
+h2 {
+    color: white;
+    font-size: 15px;
+}
+
+.cardlist img {
+    width: 170px;
+    margin-bottom: 10px;
+}
+</style>
