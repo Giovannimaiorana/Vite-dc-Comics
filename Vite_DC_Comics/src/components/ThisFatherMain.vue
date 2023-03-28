@@ -83,7 +83,7 @@ export default {
 
 <template>
     <div>
-        <date v-for="date in dates" :img="date.thumb" :text="date.series" />
+        <date v-for="date in dates " :img="date.thumb" :text="date.series" />
 
     </div>
 </template>

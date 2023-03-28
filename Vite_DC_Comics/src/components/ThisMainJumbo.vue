@@ -19,7 +19,7 @@ export default {
         </div>
         <div class="cardlist">
             <img :src="img">
-            <h2> {{ text }} </h2>
+            <h2> {{ text }} ciao</h2>
         </div>
     </div>
 </template>
@@ -36,6 +36,13 @@ export default {
 .cardlist {
     width: 100%;
     background-color: rgb(27, 27, 27);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    color: white;
+    font-size: 15px;
 }
 
 .cardlist img {}
