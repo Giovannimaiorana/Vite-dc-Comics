@@ -4,7 +4,7 @@ export default {
         return {
             loghi: [
                 {
-                    immagine: "/footer/facebook.png"
+                    immagine: "/footer-facebook.png",
                 }
             ]
         }
@@ -21,7 +21,9 @@ export default {
             <div class="sociallogo">
                 <h3>FOLLOW US</h3>
                 <ul>
-                    <li v-for="element in loghi"> <img :src="element.immagine" alt=""></li>
+                    <li v-for="(element, i) in loghi" :key="i">
+                        <img :src="element.immagine" alt="">
+                    </li>
                 </ul>
             </div>
         </div>
@@ -59,6 +61,11 @@ h3 {
 ul {
     list-style: none;
     color: white;
+}
+
+li img {
+    width: 35px;
+    margin-right: 10px;
 }
 
 .sociallogo {

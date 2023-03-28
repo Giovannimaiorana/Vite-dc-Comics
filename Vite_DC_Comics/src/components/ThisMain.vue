@@ -6,7 +6,7 @@ export default {
                 {
 
                     name: 'DIGITAL COMICS',
-                    img: "../assets/img/buy-comics-digital-comics.png"
+                    img: "/buy-comics-digital-comics.png"
                 },
                 {
                     name: 'DC MERCHANDISE',
@@ -29,6 +29,14 @@ export default {
             ]
 
         }
+
+    },
+    methods: {
+        getImageUrl(name) {
+            console.log(name);
+            return new URL(`./assets/img/${name}`, import.meta.url).href;
+
+        }
     }
 
 }
@@ -36,14 +44,12 @@ export default {
 
 <template>
     <div class="container_main">
-        <div class="contentmain">
-            <p> -->Content goes here </p>
-        </div>
+
         <div class="contentloghi">
 
             <ul>
 
-                <li v-for="element in shop">
+                <li v-for="(element, index) in shop" :key="index">
                     <img :src="element.img" :alt="element.name">
                     <span>{{ element.name }}</span>
                 </li>
@@ -86,12 +92,22 @@ export default {
 }
 
 ul li {
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+}
+
+li span {
+    vertical-align: middle;
 }
 
 ul img {
     width: 40px;
+    margin-right: 10px;
+
 
 }
 

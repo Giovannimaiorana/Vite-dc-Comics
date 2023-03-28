@@ -135,7 +135,7 @@ export default {
             </div>
             <div class="containerContentright">
                 <div class="logofooter">
-                    <img src="../assets/img/dc-logo-bg.png" alt="">
+                    <img src="/public/dc-logo-bg.png" alt="">
                 </div>
             </div>
 
@@ -165,7 +165,7 @@ export default {
 .containerfooterTop {
     width: 100%;
     max-height: 400px;
-    background-image: url(../assets/img/footer-bg.jpg);
+    background-image: url(../public/footer-bg.jpg);
 
 }
 
